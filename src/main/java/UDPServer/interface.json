@@ -1,0 +1,62 @@
+{
+  "login": {
+    "login - client": {
+      "action": "login",
+      "data": {
+        "username": "username",
+        "password": "password"
+      }
+    },
+    "login - server": {
+      "action": "login",
+      "data": {
+        "result": true,
+        "ID": 1,
+        "member": [
+          {
+            "id": 1,
+            "name": "李",
+            "head": "1e2ccba",
+            "status": true
+          },
+          {
+            "id": 2,
+            "name": "林",
+            "head": "2s5das6",
+            "status": false
+          }
+        ],
+        "message": [
+          {
+            "senderId": 1,
+            "message": "Hello",
+            "time": "2020/3/7 12:00:00"
+          },
+          {
+            "senderId": 2,
+            "message": "World",
+            "time": "2020/3/7 12:00:05"
+          }
+        ]
+      }
+    }
+  },
+  "message": {
+    "message - client": {
+      "action": "message",
+      "data": {
+        "content": "content",
+        "senderId": 1,
+        "datetime": "2020/3/7 22:45:32"
+      }
+    },
+    "message - server": {
+      "action": "message",
+      "data": {
+        "content": "content",
+        "senderId": 2,
+        "datetime": "2020/3/7 22:55:23"
+      }
+    }
+  }
+}
