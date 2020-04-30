@@ -1,0 +1,13 @@
+.Bubble {
+    -fx-background-color: rgb(179,231,244);
+    -fx-background-radius: 8px;
+}
+
+#membersScrollPane {
+    -fx-background: rgb(39,43,45);
+}
+
+.scroll-pane {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

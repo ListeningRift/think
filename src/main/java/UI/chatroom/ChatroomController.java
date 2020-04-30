@@ -71,13 +71,10 @@ public class ChatroomController implements Initializable {
                 }
             }
         });
-        scrollPane.vvalueProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
-                if (last) {
-                    scrollPane.setVvalue(1.0);
-                    last = false;
-                }
+        scrollPane.vvalueProperty().addListener((observableValue, oldValue, newValue) -> {
+            if (last) {
+                scrollPane.setVvalue(1.0);
+                last = false;
             }
         });
 
@@ -160,10 +157,10 @@ public class ChatroomController implements Initializable {
         Label messageBubble = new Label(message.getMessage());
         messageBubble.setWrapText(true);
         messageBubble.setMaxWidth(220);
-        messageBubble.setStyle("-fx-background-color: rgb(179,231,244); -fx-background-radius: 8px;");
+        messageBubble.getStyleClass().add("Bubble");
         messageBubble.setPadding(new Insets(6));
         messageBubble.setFont(font);
-        HBox.setMargin(messageBubble, new Insets(8, 0, 0, 0));
+        HBox.setMargin(messageBubble, new Insets(8, 0, 0, -1));
 
         boolean isMine = message.getSenderId() == MyId;
         double[] points;
